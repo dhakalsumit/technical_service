@@ -178,11 +178,12 @@ class _HomePageState extends State<HomePage> {
                 height: 10,
               ),
               SizedBox(
-                height: 290,
+                height: 300,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) => Container(
-                    margin: const EdgeInsets.only(right: 20),
+                    margin: const EdgeInsets.only(
+                        right: 20, bottom: 10, top: 10, left: 10),
                     padding: EdgeInsets.all(10),
                     height: 300,
                     decoration: BoxDecoration(
@@ -193,7 +194,7 @@ class _HomePageState extends State<HomePage> {
                           color: Colors.grey.withOpacity(0.5),
                           spreadRadius: 2,
                           blurRadius: 2,
-                          offset: const Offset(0, 2),
+                          offset: const Offset(3, 2),
                           // changes position of shadow
                         ),
                       ],
@@ -244,11 +245,12 @@ class _HomePageState extends State<HomePage> {
                 height: 10,
               ),
               SizedBox(
-                height: 270,
-                child: ListView.builder(
+                height: 300,
+                child: PageView.builder(
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) => Container(
-                    margin: const EdgeInsets.only(right: 20),
+                    margin: const EdgeInsets.only(
+                        right: 20, bottom: 10, top: 10, left: 10),
                     padding: EdgeInsets.all(10),
                     height: 300,
                     decoration: BoxDecoration(
@@ -289,6 +291,121 @@ class _HomePageState extends State<HomePage> {
                   ),
                   itemCount: 3,
                 ),
+              ),
+              Container(
+                height: 200,
+                width: double.infinity,
+                color: Color.fromARGB(255, 1, 88, 160),
+                child: const Padding(
+                  padding: EdgeInsets.only(left: 80),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.visibility,
+                            color: Colors.white,
+                          ),
+                          VerticalDivider(),
+                          Column(
+                            children: [
+                              Text(
+                                "Visit Us",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
+                              Text(
+                                "Dubai, United Arab Emirates",
+                                style: TextStyle(
+                                    fontSize: 10,
+                                    color: Color.fromARGB(255, 184, 180, 180)),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.email,
+                            color: Colors.white,
+                          ),
+                          VerticalDivider(),
+                          Column(
+                            children: [
+                              Text(
+                                "    Email Us",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
+                              Text(
+                                "info@tackles.ae",
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    color: Color.fromARGB(255, 184, 180, 180)),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.phone,
+                            color: Colors.white,
+                          ),
+                          VerticalDivider(),
+                          Column(
+                            children: [
+                              Text(
+                                "     Call Us",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
+                              Text(
+                                "9826354714",
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    color: Color.fromARGB(255, 184, 180, 180)),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "© 2018 - 2024 Tackles Technical LLC. All Rights Reserved",
+                style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "Powered by PRACAS INFOSYS",
+                style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
               )
             ],
           ),
