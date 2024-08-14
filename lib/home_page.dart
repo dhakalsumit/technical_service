@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tackles/drawer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,9 +10,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final List<String> images = [
-    "images/painting.png",
-    "images/AC.png",
-    "images/plaster.png",
+    "images/painter.png",
+    "images/AC-img.png",
+    "images/plaster-img.png",
   ];
   final List<String> testimonalsimage = [
     "images/tackles-logo.png",
@@ -45,7 +46,9 @@ class _HomePageState extends State<HomePage> {
           Image.asset("images/tackles-logo.png"),
           const Spacer(),
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                MenuDrawer();
+              },
               icon: const Icon(
                 Icons.menu,
                 color: Colors.blue,
@@ -70,7 +73,6 @@ class _HomePageState extends State<HomePage> {
                   return Stack(
                     children: [
                       Container(
-                        color: index % 2 == 0 ? Colors.red : Colors.blue,
                         child: Image.network(
                           "https://th.bing.com/th/id/OIP.-wN0wbPdy_iA0uBOO89gNwHaFA?rs=1&pid=ImgDetMain",
                           fit: BoxFit.contain,
