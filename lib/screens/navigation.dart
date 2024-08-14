@@ -23,7 +23,7 @@ class _NavigationState extends State<Navigation> {
     return Scaffold(
       body: IndexedStack(
         index: _selectedIndex,
-        children: [
+        children:const [
           HomeScreen(),
           HomeScreen(),
           HomeScreen(),
@@ -33,8 +33,8 @@ class _NavigationState extends State<Navigation> {
       bottomNavigationBar: CurvedNavigationBar(
         animationCurve: Curves.easeOutQuart,
         backgroundColor: Colors.white,
-        color: Color.fromARGB(221, 5, 2, 63),
-        animationDuration: Duration(milliseconds: 100),
+        color: const Color.fromARGB(221, 5, 2, 63),
+        animationDuration: const Duration(milliseconds: 100),
         items: const [
           Icon(
             Icons.home,

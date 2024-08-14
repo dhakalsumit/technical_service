@@ -10,19 +10,43 @@ class WorkersList extends StatefulWidget {
 class _WorkersListState extends State<WorkersList> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.sizeOf(context);
     return PageView.builder(itemBuilder: (context, index) {
       return Stack(
         children: [
-          Positioned(
-            top: 10,
-            left: 30,
-            child: Container(
-              height: 200,
+          Container(
+            width: double.infinity,
+            decoration: BoxDecoration(
               color: Colors.red,
+              borderRadius:
+                  const BorderRadius.only(topLeft: Radius.circular(90)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.2),
+                  spreadRadius: 2,
+                  blurRadius: 5,
+                  offset: const Offset(0, 3),
+                ),
+              ],
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Transform(
+                  transform: Transform.translate(
+                    offset: Offset(0, -25),
+                  ).transform,
+                  child: Center(
+                    child: Image.asset(
+                      "images/sudippng.png",
+                      width: 150,
+                      height: 200,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-          Image.asset("images/sudippng.png"),
           Positioned(
             top: 200,
             child: Container(
