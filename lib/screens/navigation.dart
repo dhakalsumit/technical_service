@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:tackles/screens/home_screen.dart';
 
@@ -29,41 +30,34 @@ class _NavigationState extends State<Navigation> {
           HomeScreen(),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            backgroundColor: Color.fromARGB(186, 0, 65, 114),
-            icon: Icon(
-              Icons.home,
-              color: Colors.white,
-            ),
-            label: "",
+      bottomNavigationBar: CurvedNavigationBar(
+        animationCurve: Curves.easeOutQuart,
+        backgroundColor: Colors.white,
+        color: Color.fromARGB(221, 5, 2, 63),
+        animationDuration: Duration(milliseconds: 100),
+        items: const [
+          Icon(
+            Icons.home,
+            color: Colors.white,
+            size: 25,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.file_copy,
-              color: Colors.white,
-            ),
-            label: "",
+          Icon(
+            Icons.file_copy,
+            color: Colors.white,
+            size: 25,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.search,
-              color: Colors.white,
-            ),
-            label: "",
+          Icon(
+            Icons.search,
+            color: Colors.white,
+            size: 25,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.save,
-              color: Colors.white,
-            ),
-            label: "",
+          Icon(
+            Icons.save_rounded,
+            color: Colors.white,
+            size: 25,
           ),
         ],
-        currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        iconSize: 25,
       ),
     );
   }
