@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tackles/home_page.dart';
 import 'package:tackles/screens/home_screen.dart';
 import 'package:tackles/screens/navigation.dart';
+import 'package:tackles/screens_two/homepage_two.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Navigation(),
+      home: HomepageTwo(),
     );
   }
 }

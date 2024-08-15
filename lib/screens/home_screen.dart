@@ -84,13 +84,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontWeight: FontWeight.bold,
                   color: const Color.fromARGB(255, 95, 95, 95)),
             ),
+            SizedBox(
+              height: 1,
+            ),
             const SizedBox(
               height: 300,
               child: ExpertCard(
                 name: 'Sudip',
                 backgroundColor: Colors.blue,
                 hourlyRate: 200,
-               
                 rating: 5,
                 reviewCount: 5,
                 specialty: 'Plumber',
